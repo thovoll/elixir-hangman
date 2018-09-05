@@ -1,7 +1,7 @@
 defmodule Hangman do
 
-  def hello_world do
-    IO.puts "hello, world!"
+  def hello do
+    IO.puts Dictionary.random_word()
   end
-  
+
 end
