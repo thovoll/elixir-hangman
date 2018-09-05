@@ -12,4 +12,9 @@ defmodule Lists do
     def square([]),      do: []
     def square([h | t]), do: [ h*h | square(t) ]
 
+    # Lists.map([1,2,3], fn x -> x*x*x end)
+    # Lists.map([1,2,3], &(&1*&1*&1))
+    def map([], func), do: []
+    def map([h | t], func), do: [ func.(h) | map(t, func) ]
+
 end
